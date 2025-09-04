@@ -1,0 +1,121 @@
+/**
+ * file: css/css.css
+ * purpose: styling
+ **/
+
+/* Remove whitespace on top of certain browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+font-family: Verdana, Geneva, Tahoma, sans-serif;  
+font-size: 1rem;
+
+}
+
+/* Define variables in the :root */
+ 
+
+/* Use your variables on elements along these lines */
+/*
+:root {
+  --contrast: lime;
+  --backgr: #000;
+}
+
+--- You can use the variables like this ---
+
+ main {
+   color: var(--contrast);
+   background-color: var(--backgr);
+ }
+*/
+
+/*Bestil knappen i header*/
+.BestilKnap {
+  margin-top: 4rem;      /* Afstand til h1 */
+  padding: 1rem 2rem;    /* Størrelse på knappen */
+  font-size: 2rem;     /* Størrelse på tekst */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  align-self: center;    /* Centrerer knappen i flex containeren */
+  background-color: rgb(14, 211, 11);
+  color: white;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 7rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+h2 {
+  color: forestgreen;
+}
+
+p {
+  color: rgb(0, 0, 0);
+}
+
+/* Billeder i 100% */
+img {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+/*Navigation styles*/
+  #topNav {
+    background-color: rgb(218, 30, 2);
+    color: white;
+  }
+
+    /*Link farve*/
+  #topNav a{
+    color: rgb(197, 199, 227);
+  }
+    /*Link farve når musen holdes over*/
+  #topNav a:hover {
+   color: rgb(59, 69, 160);
+  }
+
+/*Hero sektion styles*/
+header {
+  height: 100vh;
+  background-color: blue;
+  background-image: url(../images/hero.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+
+  /* Læg tekst i midten vertikalt og horisontalt */
+  display: flex;
+  flex-direction: column;      /*<------ slet den her til timen, den får knappen under h1*/
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+
+
+/* RESPONSIV DESIGN */
+
+/*Mobile enheder*/
+@media (max-width: 600px) {
+  body{background-color: lightskyblue;}
+#stemning {display: block;}
+}
+
+/*Tablet enheder*/
+@media (min-width: 601px) and (max-width: 1024px) {
+  body{background-color: lightgreen;}
+  #stemning {display: block;}
+}
+
